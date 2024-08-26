@@ -13,7 +13,7 @@ connectDB();
 app.use(
   cors({
     origin: ["https://rks-service-project-frontend.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
 );
