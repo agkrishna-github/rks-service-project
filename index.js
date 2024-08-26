@@ -7,10 +7,12 @@ const PORT = process.env.PORT || 8080;
 const cors = require("cors");
 const vehicleDetailsRoute = require("./routes/vehicleDetailsRoute");
 const driverDetailsRoute = require("./routes/driverDetailsRoute");
+const bodyParser = require("body-parser");
 
 connectDB();
 app.use(cors());
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api/v1/vehicle", vehicleDetailsRoute);
