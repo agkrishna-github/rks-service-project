@@ -19,7 +19,6 @@ app.use(
 );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.json());
 
 app.use("/api/v1/vehicle", vehicleDetailsRoute);
 app.use("/api/v1/driver", driverDetailsRoute);
