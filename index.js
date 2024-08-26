@@ -10,7 +10,13 @@ const driverDetailsRoute = require("./routes/driverDetailsRoute");
 const bodyParser = require("body-parser");
 
 connectDB();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://rks-service-project-frontend.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
