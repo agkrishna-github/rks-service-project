@@ -12,7 +12,7 @@ const bodyParser = require("body-parser");
 connectDB();
 app.use(
   cors({
-    origin: ["https://rks-service-project-frontend.vercel.app"],
+    origin: ["https://rks-service-project-frontend.onrender.com/"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
